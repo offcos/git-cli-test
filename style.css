@@ -1,4 +1,8 @@
 body{
     color: aquamarine;
     font-weight: bold;
+    background-attachment: fixed;
+    font-size: 12em;
+    font-variant: small-caps;
+    
 }
