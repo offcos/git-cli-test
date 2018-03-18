@@ -1,3 +1,4 @@
+## 版本操作
 
 未add前：
 
@@ -24,4 +25,41 @@ HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历�
 场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。
 
 
-本地误删文件，
+
+本地误删文件，已提交版本库，用`git checkout HEAD file` 或者 `git reset HEAD file`还原文件
+
+本地误删文件，未提交版本库，用`git checkout -- file`还原文件，表示用版本库里的版本替换工作区的版本
+
+
+
+要关联一个远程库，使用命令`git remote add origin git@server-name:path/repo-name.git`
+
+命令`git push -u origin master`第一次推送master分支的所有内容
+
+
+## 分支
+
+查看分支：git branch
+
+创建分支：git branch <name>
+
+切换分支：git checkout <name>
+
+创建+切换分支：git checkout -b <name>
+
+合并某分支到当前分支：git merge <name>
+
+删除分支：git branch -d <name>
+
+强行删除分支:git branch -D <name>强行删除未合并的分支
+
+
+## 标签
+
+命令`git tag <name>`用于新建一个标签，默认为HEAD，也可以指定一个commit id
+
+`git show <tagname>`查看标签信息
+
+`git tag -a <tagname> -m "blablabla..."`可以指定标签信息
+
+命令`git tag`可以查看所有标签
